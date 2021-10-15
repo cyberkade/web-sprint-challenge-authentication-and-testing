@@ -27,10 +27,13 @@ describe("[POST] /api/auth/register", () => {
       .send({ username: "johnCena", password: "ucantcme" });
   });
   it("responds with 201 CREATED", async () => {
-    expect(res.status).toBe(200);
+    expect(res.status).toBe(201);
   });
   it("responds with the correct data structure", async () => {
-    const expected = { username: "johnCena", password: "ucantcme" };
+    const expected = {
+      id: 1,
+      username: "johnCena",
+    };
     expect(res.body).toMatchObject(expected);
     expect(res.body.password).not.toBe("ucantcme");
   });

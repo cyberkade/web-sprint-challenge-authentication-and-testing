@@ -18,8 +18,8 @@ async function add(user) {
 }
 
 module.exports = {
+  add,
   find,
   findBy,
   findById,
-  add,
 };

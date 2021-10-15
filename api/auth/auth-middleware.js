@@ -8,7 +8,6 @@ const checkUsernameFree = async (req, res, next) => {
   } else {
     next({ status: 401, message: "username taken" });
   }
-  next();
 };
 
 const checkUsernameExists = async (req, res, next) => {
