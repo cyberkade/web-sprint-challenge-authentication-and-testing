@@ -19,7 +19,6 @@ const checkUsernameExists = async (req, res, next) => {
   } else {
     next({ status: 401, message: "invalid credentials" });
   }
-  next();
 };
 
 const validateUser = async (req, res, next) => {
